@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #3E3E3E;
+  font-family: 'Inter', sans-serif;
+}
+
+.registrationPage {
+  display: grid;
+  justify-content: center;
+}
+
+.title {
+  display: grid;
+  justify-content: center;
+}
+
+.logo--image {
+  width: 200px;
+  border-radius: 100px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  
+}
+
+.title--name {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+}
+
+.registrationForm {
+  font-size: 25px;
+  margin-top: 100px;
+}
+
+.form--input {
+  height: 30px;
+  width: 15vw;
+  font-size: 18px;
+  padding: 10px;
+  padding-inline: 20px;
+  background-color: #3E3E3E;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 10px;
+  transition: border-color .2s ease;
+}
+
+.form--element {
+  position: relative;
+  display: grid;
+  gap: 20px;
+}
+
+.form--label {
+  position: absolute;
+  background-color: #3E3E3E;
+  color: #fff;
+  font-size: 12px;
+  padding-inline: 5px;
+  left: 0;
+  transform: translate(10px, -7px);
+  transition: transform .15s ease-out,color .2s ease-out;
+}
+
+.second--label {
+  transform: translate(10px, 65px);
+}
+
+.form--input:hover {
+  border: 1px solid #FF9900;
+}
+
+.form--input:hover + .form--label {
+  color: #FF9900;
+}
+
+.form--input:focus + .form--label {
+  color: #FF9900;
+}
+
+.form--input:focus {
+  outline: none;
+  border: 2px solid #FF9900;
+  padding: 9px;
+  padding-inline: 19px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.checkbox--input {
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+
+.checkbox--input:checked {
+  accent-color: #ff5e00;
+}
+
+.show--password {
+  color: #fff;
+  font-size: 16px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.button {
+  font-size: 20px;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  background-color: #FF9900;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 15px;
+}
+
+.button:hover {
+  background-color: #ffa41c;
+}
+
+.button:active {
+  background-color: #d68101;
+}
