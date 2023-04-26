@@ -40,7 +40,7 @@ export function PhoneDetails({ phoneNumber, updateFields, setIsValid}: PhoneForm
           numericOnly: true
          }}
         value={phoneNumber}
-        onChange={handlePhoneNumberChange}
+        onChange={e => updateFields({ phoneNumber: e.target.value })}
         onKeyDown={handleKeyDown}
         className="form--input"
       />
