@@ -19,7 +19,7 @@ export function PhoneDetails({ phoneNumber, updateFields, setIsValid}: PhoneForm
     setInputValue(value);
     const valid = value.length === 16;
     setIsValid(valid);
-    updateFields({ phoneNumber: value });
+    updateFields({ phoneNumber: event.target.value });
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {

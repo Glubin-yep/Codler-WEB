@@ -17,7 +17,7 @@ export function PasswordDetails({ password, confirmPassword, updateFields}: Pass
       <input autoFocus
             required 
             type={showPassword ? 'text' : 'password'}  
-            value={password} 
+            value={password}
             onChange={e => updateFields({ password: e.target.value })}  
             className="form--input"/>
       <label className="form--label">Password</label>
