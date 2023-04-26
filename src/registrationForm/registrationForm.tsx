@@ -24,7 +24,7 @@ const INITIALL_DATA : FormData = {
 
 function RegistrationForm() {
   const [ data, setData ] = useState(INITIALL_DATA);
-  // const [isValid, setIsValid] = useState(false);
+  const [isValid, setIsValid] = useState(false);
   function updateFields(fields: Partial<FormData>) {
     setData(prev => {
       return {...prev, ...fields}
@@ -39,7 +39,7 @@ function RegistrationForm() {
     isLastStep 
   } = useMultistepForm([
     //<UserForm {...data} updateFields={updateFields} />,
-    <PhoneDetails {...data} updateFields={updateFields} />,
+    <PhoneDetails {...data} updateFields={updateFields} setIsValid={setIsValid}/>,
     <UserDetails {...data} updateFields={updateFields}/>,
     <PasswordDetails {...data} updateFields={updateFields}/>
   ]);
@@ -66,9 +66,11 @@ function RegistrationForm() {
               {!isFirstStep && <button type='button' className='button' onClick={back}>
                 Back
                 </button>}
+              { isValid && (
                 <button type='submit' className="button">
                   {isLastStep ? "Finish" : "Next"}
                 </button>
+              )}
             </div>
           </form>
           </div>
