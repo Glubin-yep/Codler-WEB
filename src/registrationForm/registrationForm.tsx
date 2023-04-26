@@ -48,6 +48,8 @@ function RegistrationForm() {
     e.preventDefault()
     if (!isLastStep) return next()
     alert("Successful Account Creation")
+    console.log(data);
+    setData(data);
   }
 
   return (
