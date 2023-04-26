@@ -17,13 +17,13 @@ export function PhoneDetails({ phoneNumber, updateFields, setIsValid}: PhoneForm
   const handlePhoneNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setInputValue(value);
-    const valid = value.length === 10;
+    const valid = value.length === 12;
     setIsValid(valid);
     updateFields({ phoneNumber: event.target.value });
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter" && event.currentTarget.value.length !== 10) {
+    if (event.key === "Enter" && event.currentTarget.value.length !== 12) {
       event.preventDefault();
     }
   };
@@ -34,7 +34,7 @@ export function PhoneDetails({ phoneNumber, updateFields, setIsValid}: PhoneForm
         autoFocus
         required
         options={{
-          blocks: [10],
+          blocks: [3, 3, 4],
           numericOnly: true
          }}
         value={phoneNumber}
