@@ -25,6 +25,8 @@ const INITIALL_DATA : FormData = {
 function RegistrationForm() {
   const [ data, setData ] = useState(INITIALL_DATA);
   const [isValid, setIsValid] = useState(false);
+  const [passwordsMatch, setPasswordsMatch] = useState(true);
+
   function updateFields(fields: Partial<FormData>) {
     setData(prev => {
       return {...prev, ...fields}
@@ -41,12 +43,19 @@ function RegistrationForm() {
     //<UserForm {...data} updateFields={updateFields} />,
     <PhoneDetails {...data} updateFields={updateFields} setIsValid={setIsValid}/>,
     <UserDetails {...data} updateFields={updateFields}/>,
-    <PasswordDetails {...data} updateFields={updateFields}/>
+    <PasswordDetails {...data} updateFields={updateFields} passwordsMatch={passwordsMatch} setPasswordsMatch={setPasswordsMatch} />
   ]);
 
   function onSubmit(e: FormEvent) {
     e.preventDefault()
     if (!isLastStep) return next()
+
+    if (data.password !== data.confirmPassword) {
+      setPasswordsMatch(false);
+      return;
+    }
+    setPasswordsMatch(true);
+
     alert("Successful Account Creation")
     console.log(data);
     setData(data);

@@ -41,7 +41,7 @@ body {
 
 .form--input {
   height: 30px;
-  width: 15vw;
+  width: 280px;
   font-size: 18px;
   padding: 10px;
   padding-inline: 20px;
@@ -50,6 +50,75 @@ body {
   border: 1px solid;
   border-radius: 10px;
   transition: border-color .2s ease;
+}
+
+.phone--input {
+  padding-left: 50px;
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 20px;
+  background-color: #3E3E3E;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 10px;
+  transition: border-color .2s ease;
+}
+
+.phone--input:hover {
+  border: 1px solid #FF9900;
+}
+
+.phone--input:hover + .form--label {
+  color: #FF9900;
+}
+
+.phone--input:focus + .form--label {
+  color: #FF9900;
+}
+
+.phone--input:focus {
+  outline: none;
+  border: 2px solid #FF9900;
+  padding: 9px;
+  padding-left: 49px;
+  padding-right: 19px;
+}
+
+.country--code {
+  position: absolute;
+  transform: translate(12px, 15px);
+  color: #fff;
+  font-size: 18px;
+}
+
+.phone--input-invalid {
+  border: 1px solid #ff2b2b;  
+}
+
+.phone--input-invalid + .form--label {
+  color: #ff2b2b;
+}
+
+.phone--input-invalid:hover {
+  border: 1px solid #ff2b2b;  
+}
+
+.phone--input-invalid:hover + .form--label {
+  color: #ff2b2b;  
+}
+
+.phone--input-invalid:focus {
+  border: 2px solid #ff2b2b;  
+  padding: 9px;
+  padding-left: 49px;
+  padding-right: 19px;
+}
+
+.phone--input-invalid:focus + .form--label {
+  color: #ff2b2b;  
 }
 
 .form--element {
@@ -111,6 +180,36 @@ body {
 .show--password {
   color: #fff;
   font-size: 16px;
+}
+
+.confirm--password--error {
+  border: 1px solid #ff2b2b;
+}
+
+.confirm--password--error:hover {
+  border: 1px solid #ff2b2b;
+}
+
+.confirm--password--error:focus {
+  border: 2px solid #ff2b2b;
+}
+
+.form--label--error {
+  color: #ff2b2b;
+}
+
+.confirm--password--error:hover + .form--label--error {
+  color: #ff2b2b;
+}
+
+.confirm--password--error:focus + .form--label--error {
+  color: #ff2b2b;
+}
+
+.error-message {
+  color: #e02525;
+  font-size: 18px;
+  margin-left: 10px;
 }
 
 .buttons {
